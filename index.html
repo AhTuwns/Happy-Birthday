@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chúc Mừng Sinh Nhật Chị Gái</title>
+  <title>Chúc Mừng Sinh Nhật Chị Yêu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -149,13 +149,9 @@
       Mong rằng tuổi mới sẽ mang đến cho chị thật nhiều niềm vui và may mắn ❤️<br>
     </div>
   </div>
-  <audio autoplay loop>
-     <source src="happybirthday.mp3" type="audio/mpeg">
+  <audio id="bg-music" loop>
+   <source src="happybirthday.mp3" type="audio/mpeg">
   </audio>
-
-  <button onclick="playMusic()">
-  🎵 Play Music
-  </button>
 
   <script>
     function showMessage() {
@@ -181,11 +177,10 @@
     }
 
     setInterval(createFloatingItem, 300);
-
-    function playMusic() {
-      const music = document.getElementById('birthdayMusic');
-      music.play();
-}
+    window.addEventListener('click', () => {
+    const music = document.getElementById('bg-music');
+    music.play();
+}, { once: true });
   </script>
 
 </body>
