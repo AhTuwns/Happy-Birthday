@@ -149,9 +149,14 @@
       Mong rằng tuổi mới sẽ mang đến cho chị thật nhiều niềm vui và may mắn ❤️<br>
     </div>
   </div>
-<audio autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8e0a4e6.mp3?filename=happy-birthday-to-you-piano-version-13976.mp3" type="audio/mpeg">
-</audio>
+  <audio autoplay loop>
+     <source src="happybirthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <button onclick="playMusic()">
+  🎵 Play Music
+  </button>
+
   <script>
     function showMessage() {
       document.getElementById('message').style.display = 'block';
@@ -176,6 +181,11 @@
     }
 
     setInterval(createFloatingItem, 300);
+
+    function playMusic() {
+      const music = document.getElementById('birthdayMusic');
+      music.play();
+}
   </script>
 
 </body>
